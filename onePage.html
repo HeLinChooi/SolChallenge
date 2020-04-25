@@ -12,99 +12,8 @@
   <div>
     <div class="header sticky">
       <header>Uni Search</header>
-      <button class="filter_button" href="javascript:void(0)" onclick="openNav()">Filter</button>
+      <button class="filter_button" href="javascript:void(0)" onclick="toLanding()">Filter</button>
     </div>
-    <div class="sidepanel" id="mySidePanel">
-      <button class="close_button" onclick="closeNav()">&times;</button>
-      <!-- where to send? -->
-      <form action="index.html">
-        <div class="filter_form">
-          <div class="formUpperPart">
-            <div class="divcategory">
-              <label for="categories" class="cateTitle">Category</label>
-              <input type="text" list="categoriesList" id="categories" name="categories">
-
-              <datalist id="categoriesList">
-                <option value="CS"></option>
-                <option value="Education"></option>
-                <option value="Agriculture"></option>
-                <option value="Other"></option>
-              </datalist>
-            </div>
-
-            <div class="divcourse">
-              <label for="courses" class="courseTitle">Course</label>
-              <input type="text" list="coursesList" id="courses" name="courses">
-
-              <datalist id="coursesList">
-                <option value="CS"></option>
-                <option value="CS2"></option>
-                <option value="CS3"></option>
-                <option value="CS4"></option>
-              </datalist>
-            </div>
-
-            <div class="divcgpa">
-              <label for="min_cgpa" class="cgpaTitle">Minimum CGPA</label>
-              <input type="text" list="cgpaList" id="cgpa" name="cgpa">
-
-              <datalist id="cgpaList">
-                <option value="0.5"></option>
-                <option value="1.0"></option>
-                <option value="1.5"></option>
-                <option value="2.0"></option>
-                <option value="2.5"></option>
-                <option value="3.0"></option>
-                <option value="3.5"></option>
-                <option value="4.0"></option>
-              </datalist>
-            </div>
-
-            <div class="divmuet">
-              <label for="min_muet" class="muetTitle">Minimum Muet Band</label>
-              <input type="text" list="muetList" id="muet" name="muet">
-
-              <datalist id="muetList">
-                <option value="Band 1"></option>
-                <option value="Band 2"></option>
-                <option value="Band 3"></option>
-                <option value="Band 4"></option>
-                <option value="Band 5"></option>
-                <option value="Band 6"></option>
-              </datalist>
-            </div>
-          </div>
-
-          <p class="locationTitle">Location(s)</p>
-          <div class="outerdivlocation">
-            <div class="divlocation">
-              <div class="location">
-                <label for="selangor">Selangor</label>
-                <input type="checkbox" name="location" id="selangor" value="selangor">
-              </div>
-              <div class="location">
-                <label for="selangor">Perak</label>
-                <input type="checkbox" name="location" id="perak" value="perak">
-              </div>
-              <div class="location">
-                <label for="selangor">Negeri Sembilan</label>
-                <input type="checkbox" name="location" id="n9" value="n9">
-              </div>
-              <div class="location">
-                <label for="selangor">Pahang</label>
-                <input type="checkbox" name="location" id="pahang" value="pahang">
-              </div>
-              <div class="location">
-                <label for="selangor">Perlis</label>
-                <input type="checkbox" name="location" id="perlis" value="perlis">
-              </div>
-            </div>
-          </div>
-          <input type="submit" value="submit" class="submit_button">
-        </div>
-      </form>
-    </div>
-
 
     <div class="grids">
       <div class="one_grid">
@@ -189,16 +98,18 @@
   console.log("after analytics");
   var database = firebase.database();
   console.log("hi");
-  var fruitRef = database.ref('/name/');
+  // WRITE
+  // var fruitRef = database.ref('/name/');
   // var result = fruitRef.set({
   //   name:'orange',
   //   count:3
   // });
-  console.log("start reading data");
-  fruitRef.on('value',function(snapshot){
-    console.log(snapshot.val().name);
-    console.log(snapshot.val().count + " girls on the street.");
-  });
+  // READ
+  // console.log("start reading data");
+  // fruitRef.on('value',function(snapshot){
+  //   console.log(snapshot.val().name);
+  //   console.log(snapshot.val().count + " girls on the street.");
+  // });
 </script>
   <script src="onePageScript.js"></script>
 </body>

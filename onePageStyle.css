@@ -19,7 +19,7 @@ body{
 
 .sticky{
   top: 0;
-  position: fixed;
+  /* position: fixed; */
 }
 
 .filter_button,.submit_button{
@@ -59,7 +59,7 @@ a{
 }
 .grids{
   padding: 2%;
-  margin-top: 70px;
+  /* margin-top: 70px; */
   /* display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -72,19 +72,19 @@ a{
 }
 .sidepanel{
   height: 100%;
-  width: 0;
-  z-index: 1;
-  position: fixed;
-  background-color: #d7d9d7;
+  width: 100%;
+  /* z-index: 1; */
+  /* position: fixed; */
+  /* background-color: #d7d9d7; */
   overflow-x: hidden;
   /* float: right; */
-  padding: 1% 0;
-  transition: 1s;
+  padding: 2% 0;
+  /* transition: 1s; */
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  /* max-width: 600px; */
 }
-.close_button{
+/* .close_button{
   position: absolute;
   top: 2%;
   right: 2%;
@@ -92,10 +92,10 @@ a{
   min-width: 5%;
   min-height: 5%;
   /* max-width: 3%;
-  max-height: 3%; */
+  max-height: 3%; 
   background-color:#f1f1f1;
   border: none;
-}
+} */
 .formUpperPart{
   display: grid;
   grid-template-columns: 1fr;
@@ -112,11 +112,14 @@ a{
   /* background-color: blueviolet; */
 }
 .submit_button{
-  background-color: #f1f1f1;
-  padding: 5px;
-  max-width: 50%;
+  background-color: #d7d9d7;
+  /* padding:1%; */
+  max-width: 30%;
   margin-top: 5%;
-  padding: 3% 4%;
+  padding: 10px 20px;
+}
+.submit_button:hover{
+  background-color: #c7c7c7;
 }
 .divlocation{
   width: 100%;
@@ -161,4 +164,10 @@ a{
 .muetTitle,.cateTitle,.courseTitle,.cgpaTitle{
   width: 40%;
   /* background-color: #fb0; */
+}
+.title{
+  font-size: 200%;
+  display: flex;
+  justify-content: center;
+  /* padding: 2%; */
 }
