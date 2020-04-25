@@ -13,7 +13,7 @@ function toLanding(){
 }
 function addOne(){
   console.log("in function");
-  document.getElementById("oneExtraGrid").innerHTML = `
+  document.getElementById("gridsId").innerHTML += `
   <div class="one_grid">
     <div>Bachelor of East Asian Studies</div>
     <div>UM</div>
