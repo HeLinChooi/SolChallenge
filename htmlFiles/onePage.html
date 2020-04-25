@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="onePageStyle.css">
+  <script data-main = "scripts/main" src = "scripts/require.js"></script>
   <title>Document</title>
 </head>
 
@@ -66,7 +67,7 @@
       </div>
       <!-- <div id="oneExtraGrid"></div> -->
       <div>
-        <button class="addOne" href="javascript:void(0)" onclick="addOne()">Add One Box</button>
+        <button class="addOne" href="javascript:void(0)" onclick="addOne();getDatabase()">Add One Box</button>
       </div>
     </div>
   </div>
@@ -83,6 +84,7 @@
 
 <script>
   console.log("starting of the script");
+  
   // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyAdzeQLDkgbKMSS72UctU4qpy1aNvdXVmY",
@@ -119,7 +121,6 @@
   console.log(username);
 });
 </script>
-  <script src="onePageScript.js"></script>
+  <script src="scripts/onePageScript.js"></script>
 </body>
-
 </html>
