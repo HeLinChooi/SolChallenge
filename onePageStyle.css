@@ -172,3 +172,9 @@ a{
   justify-content: center;
   /* padding: 2%; */
 }
+.noResult{
+  display: flex;
+  justify-content: center;
+  font-size: 400%;
+  width: 100%;
+}

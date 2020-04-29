@@ -93,37 +93,37 @@ function displayCourses(map) {
   }
   courses.innerHTML = newInnerHTML;
 }
-
-console.log("initialise value for saving time");
-let form1 = document.getElementById("filter_form_id");
-let categoryName = form1[0];
-let courseName = form1[1];
-let mincgpa = form1[2];
-let minmuet = form1[3];
-let kl = form1[17];
-let kl2 = form1[10];
-let kl3 = form1[11];
-let kl4 = form1[12];
-let kl5 = form1[4];
-let kl6 = form1[5];
-let kl7 = form1[6];
-let kl8= form1[7];
-let kl9 = form1[8];
-let kl10 = form1[9];
-categoryName.value = "Computer Science & IT";
-courseName.value = "Computer Science";
-mincgpa.value = "2";
-minmuet.value = "1";
-kl.checked = true;
-kl2.checked = true;
-kl3.checked = true;
-kl4.checked = true;
-kl5.checked = true;
-kl6.checked = true;
-kl7.checked = true;
-kl8.checked = true;
-kl9.checked = true;
-kl10.checked = true;
+// below comments are for testing purpose
+// console.log("initialise value for saving time");
+// let form1 = document.getElementById("filter_form_id");
+// let categoryName = form1[0];
+// let courseName = form1[1];
+// let mincgpa = form1[2];
+// let minmuet = form1[3];
+// let kl = form1[17];
+// let kl2 = form1[10];
+// let kl3 = form1[11];
+// let kl4 = form1[12];
+// let kl5 = form1[4];
+// let kl6 = form1[5];
+// let kl7 = form1[6];
+// let kl8= form1[7];
+// let kl9 = form1[8];
+// let kl10 = form1[9];
+// categoryName.value = "Computer Science & IT";
+// courseName.value = "Computer Science";
+// mincgpa.value = "2";
+// minmuet.value = "1";
+// kl.checked = true;
+// kl2.checked = true;
+// kl3.checked = true;
+// kl4.checked = true;
+// kl5.checked = true;
+// kl6.checked = true;
+// kl7.checked = true;
+// kl8.checked = true;
+// kl9.checked = true;
+// kl10.checked = true;
 
 function processForm(map) {
 
@@ -155,6 +155,7 @@ function processForm(map) {
   //change page to initialise html element
   toResultPage();
   let courseList = map.get(categoryName).get(courseName);
+  let gotResult = false;
   for(let i = 0; i < courseList.size ; i++){
     console.log("one block");
     //b means "block"
@@ -162,14 +163,22 @@ function processForm(map) {
     const bmin_muet = courseList.get(i).min_muet;
     const blocation = courseList.get(i).location;
     const buni_index = courseList.get(i).uni_index;
+    
     if(bmin_cgpa >= mincgpa && bmin_muet >= minmuet && matchLocation(matchedLocations, blocation)){
       console.log("MATCHHHHH!");
+      gotResult = true;
       addOne(courseName,bmin_cgpa,bmin_muet,buni_index);
     }
     // console.log(courseList.get(i).min_cgpa);
     // console.log(courseList.get(i).min_muet);
     // console.log(courseList.get(i).location);
     // console.log(courseList.get(i).uni_index);
+  }
+  if(!gotResult){
+    console.log("No result");
+    document.getElementById("gridsId").innerHTML = `<div class="noResult"><p>
+    No Result
+  </p></div>`;
   }
 }
 
