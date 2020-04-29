@@ -115,7 +115,7 @@ a{
   background-color: #d7d9d7;
   /* padding:1%; */
   max-width: 30%;
-  margin-top: 5%;
+  margin-top: 7%;
   padding: 10px 20px;
 }
 .submit_button:hover{
@@ -126,7 +126,7 @@ a{
   display: grid;
   grid-gap: 3%;
   grid-template-columns: 1fr 1fr;
-
+  
   /* display: flex;
   justify-content: space-between;
   flex-wrap: wrap; */
@@ -137,6 +137,7 @@ a{
   display: flex;
   justify-content: center;
   width: 70%;
+  /* background-color: brown; */
 }
 .location{
   background-color: #f1f1f1;
