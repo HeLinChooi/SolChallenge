@@ -21,3 +21,5 @@ According to the survey, they show a strong demand for more tools to help them i
  
 Along the way, we exchanged ideas of the data structure and the technologies we should use to make this product user-friendly and efficient to build. We opted for HTML5, CSS3 and JavaScript to build the application since we have some knowledge in these technologies and were interested to dive deeper into it. Whereas we used Firebase and Google Sheets API to manage the data about the courses and universities efficiently. The data collected was stored in Google Sheets and using the Google Sheets API, we synced the data to a realtime database in Firebase which is accessed to display output to users based on the options they filter. 
  
+ ## Guide to run code ##
+ Run the landing.html. Click all the filter options and click the submit button. You will be directed to the next page, showing the result of the search. To filter agian, click the "filter button at the top right corner.
