@@ -14,142 +14,145 @@
       <header>Uni Search</header>
     </div>
 
-    <div class="sidepanel" id="mySidePanel">
-      <!-- <form action="onePage.html" onsubmit="processForm(category2course)" id="filter_form_id"> -->
-      <form action="" onsubmit="processForm(category2course)" id="filter_form_id">
-        <div class="filter_form">
-          <div class="formUpperPart">
-            <div class="title">Select all the options below to filter</div>
-            <div class="divcategory">
-              <label for="categories" class="cateTitle">Category</label>
-              <input type="text" list="categoriesList" id="categories" name="categories"
-                onchange="displayCourses(category2course)" required>
+    <div class="container">
+      <div class="form-container">
+        <h1>Find Your Dream University </h1>
+        <!-- <form action="onePage.html" onsubmit="processForm(category2course)" id="filter_form_id"> -->
+        <form action="" onsubmit="processForm(category2course)" id="filter_form_id">
+          <div class="filter_form">
+            <div class="formUpperPart">
+              <!-- <div class="title">Select all the options below to filter</div> -->
+              <div class="divcategory">
+                <label for="categories" class="cateTitle">Category</label>
+                <input type="text" list="categoriesList" id="categories" name="categories"
+                  onchange="displayCourses(category2course)" required>
 
-              <datalist id="categoriesList">
-                <!-- wait for Js -->
-              </datalist>
+                <datalist id="categoriesList">
+                  <!-- wait for Js -->
+                </datalist>
+              </div>
+
+              <div class="divcourse">
+                <label for="courses" class="courseTitle">Course</label>
+                <input type="text" list="coursesList" id="courses" name="courses" required>
+
+                <datalist id="coursesList">
+                  <!-- wait for Js -->
+                </datalist>
+              </div>
+
+              <div class="divcgpa">
+                <label for="min_cgpa" class="cgpaTitle">Minimum CGPA</label>
+                <input type="text" list="cgpaList" id="cgpa" name="cgpa" required>
+
+                <datalist id="cgpaList">
+                  <!-- <option value="0.5"></option> -->
+                  <!-- <option value="1.0"></option> -->
+                  <!-- <option value="1.5"></option> -->
+                  <option value="2.0"></option>
+                  <option value="2.5"></option>
+                  <option value="3.0"></option>
+                  <option value="3.5"></option>
+                  <option value="4.0"></option>
+                </datalist>
+              </div>
+
+              <div class="divmuet">
+                <label for="min_muet" class="muetTitle">Minimum Muet Band</label>
+                <input type="text" list="muetList" id="muet" name="muet" required>
+
+                <datalist id="muetList">
+                  <option value="Band 1"></option>
+                  <option value="Band 2"></option>
+                  <option value="Band 3"></option>
+                  <option value="Band 4"></option>
+                  <option value="Band 5"></option>
+                  <option value="Band 6"></option>
+                </datalist>
+              </div>
             </div>
 
-            <div class="divcourse">
-              <label for="courses" class="courseTitle">Course</label>
-              <input type="text" list="coursesList" id="courses" name="courses" required>
+            <p class="locationTitle">Location(s)</p>
+            <div class="outerdivlocation">
+              <div class="divlocation">
+                <div class="location">
+                  <label for="Selangor">Selangor</label>
+                  <input type="checkbox" name="location" id="Selangor" value="Selangor">
+                </div>
+                <div class="location">
+                  <label for="Perak">Perak</label>
+                  <input type="checkbox" name="location" id="Perak" value="Perak">
+                </div>
+                <div class="location">
+                  <label for="Johor">Johor</label>
+                  <input type="checkbox" name="location" id="Johor" value="Johor">
+                </div>
+                <div class="location">
+                  <label for="Kedah">Kedah</label>
+                  <input type="checkbox" name="location" id="Kedah" value="Kedah">
+                </div>
+                <div class="location">
+                  <label for="Melaka">Melaka</label>
+                  <input type="checkbox" name="location" id="Melaka" value="Melaka">
+                </div>
+                <div class="location">
+                  <label for="Kelantan">Kelantan</label>
+                  <input type="checkbox" name="location" id="Kelantan" value="Kelantan">
+                </div>
 
-              <datalist id="coursesList">
-                <!-- wait for Js -->
-              </datalist>
+                <div class="location">
+                  <label for="Penang">Penang</label>
+                  <input type="checkbox" name="location" id="Penang" value="Penang">
+                </div>
+
+                <div class="location">
+                  <label for="Sabah">Sabah</label>
+                  <input type="checkbox" name="location" id="Sabah" value="Sabah">
+                </div>
+
+                <div class="location">
+                  <label for="Sarawak">Sarawak</label>
+                  <input type="checkbox" name="location" id="Sarawak" value="Sarawak">
+                </div>
+
+                <div class="location">
+                  <label for="Terengganu">Terengganu</label>
+                  <input type="checkbox" name="location" id="Terengganu" value="Terengganu">
+                </div>
+                <div class="location">
+                  <label for="n9">Negeri Sembilan</label>
+                  <input type="checkbox" name="location" id="n9" value="n9">
+                </div>
+                <div class="location">
+                  <label for="pahang">Pahang</label>
+                  <input type="checkbox" name="location" id="pahang" value="pahang">
+                </div>
+                <div class="location">
+                  <label for="perlis">Perlis</label>
+                  <input type="checkbox" name="location" id="perlis" value="perlis">
+                </div>
+                <div class="location">
+                  <label for="Kuala Lumpur">Kuala Lumpur</label>
+                  <input type="checkbox" name="location" id="Kuala Lumpur" value="Kuala Lumpur">
+                </div>
+                <div class="location">
+                  <label for="Putrajaya">Putrajaya</label>
+                  <input type="checkbox" name="location" id="Putrajaya" value="Putrajaya">
+                </div>
+                <div class="location">
+                  <label for="Labuan">Labuan</label>
+                  <input type="checkbox" name="location" id="Labuan" value="Labuan">
+                </div>
+                <div class="location">
+                  <label for="Cyberjaya">Cyberjaya</label>
+                  <input type="checkbox" name="location" id="Cyberjaya" value="Cyberjaya">
+                </div>
+              </div>
             </div>
-
-            <div class="divcgpa">
-              <label for="min_cgpa" class="cgpaTitle">Minimum CGPA</label>
-              <input type="text" list="cgpaList" id="cgpa" name="cgpa" required>
-
-              <datalist id="cgpaList">
-                <!-- <option value="0.5"></option> -->
-                <!-- <option value="1.0"></option> -->
-                <!-- <option value="1.5"></option> -->
-                <option value="2.0"></option>
-                <option value="2.5"></option>
-                <option value="3.0"></option>
-                <option value="3.5"></option>
-                <option value="4.0"></option>
-              </datalist>
-            </div>
-
-            <div class="divmuet">
-              <label for="min_muet" class="muetTitle">Minimum Muet Band</label>
-              <input type="text" list="muetList" id="muet" name="muet" required>
-
-              <datalist id="muetList">
-                <option value="Band 1"></option>
-                <option value="Band 2"></option>
-                <option value="Band 3"></option>
-                <option value="Band 4"></option>
-                <option value="Band 5"></option>
-                <option value="Band 6"></option>
-              </datalist>
-            </div>
+            <input type="submit" value="submit" class="submit_button">
           </div>
-
-          <p class="locationTitle">Location(s)</p>
-          <div class="outerdivlocation">
-            <div class="divlocation">
-              <div class="location">
-                <label for="Selangor">Selangor</label>
-                <input type="checkbox" name="location" id="Selangor" value="Selangor">
-              </div>
-              <div class="location">
-                <label for="Perak">Perak</label>
-                <input type="checkbox" name="location" id="Perak" value="Perak">
-              </div>
-              <div class="location">
-                <label for="Johor">Johor</label>
-                <input type="checkbox" name="location" id="Johor" value="Johor">
-              </div>
-              <div class="location">
-                <label for="Kedah">Kedah</label>
-                <input type="checkbox" name="location" id="Kedah" value="Kedah">
-              </div>
-              <div class="location">
-                <label for="Melaka">Melaka</label>
-                <input type="checkbox" name="location" id="Melaka" value="Melaka">
-              </div>
-              <div class="location">
-                <label for="Kelantan">Kelantan</label>
-                <input type="checkbox" name="location" id="Kelantan" value="Kelantan">
-              </div>
-
-              <div class="location">
-                <label for="Penang">Penang</label>
-                <input type="checkbox" name="location" id="Penang" value="Penang">
-              </div>
-
-              <div class="location">
-                <label for="Sabah">Sabah</label>
-                <input type="checkbox" name="location" id="Sabah" value="Sabah">
-              </div>
-
-              <div class="location">
-                <label for="Sarawak">Sarawak</label>
-                <input type="checkbox" name="location" id="Sarawak" value="Sarawak">
-              </div>
-
-              <div class="location">
-                <label for="Terengganu">Terengganu</label>
-                <input type="checkbox" name="location" id="Terengganu" value="Terengganu">
-              </div>
-              <div class="location">
-                <label for="n9">Negeri Sembilan</label>
-                <input type="checkbox" name="location" id="n9" value="n9">
-              </div>
-              <div class="location">
-                <label for="pahang">Pahang</label>
-                <input type="checkbox" name="location" id="pahang" value="pahang">
-              </div>
-              <div class="location">
-                <label for="perlis">Perlis</label>
-                <input type="checkbox" name="location" id="perlis" value="perlis">
-              </div>
-              <div class="location">
-                <label for="Kuala Lumpur">Kuala Lumpur</label>
-                <input type="checkbox" name="location" id="Kuala Lumpur" value="Kuala Lumpur">
-              </div>
-              <div class="location">
-                <label for="Putrajaya">Putrajaya</label>
-                <input type="checkbox" name="location" id="Putrajaya" value="Putrajaya">
-              </div>
-              <div class="location">
-                <label for="Labuan">Labuan</label>
-                <input type="checkbox" name="location" id="Labuan" value="Labuan">
-              </div>
-              <div class="location">
-                <label for="Cyberjaya">Cyberjaya</label>
-                <input type="checkbox" name="location" id="Cyberjaya" value="Cyberjaya">
-              </div>
-            </div>
-          </div>
-          <input type="submit" value="submit" class="submit_button">
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
   <script src="onePageScript.js"></script>

@@ -3,8 +3,9 @@
   margin: 0;
   padding: 0;
 }
-body{
-  background-color:  #f1f1f1;
+body,html{
+  background-color:  #fff;
+  height: 100%;
 }
 .header{
   background: #555555; 
@@ -15,6 +16,18 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.container {
+  height: 100%;
+  background-image: url("./imgs/4.jpg");
+  background-position: center;
+  background-size: cover;
+  background-size: 100%;
+   /* Full height */
+  width: 100%;
+  background-repeat: no-repeat;
+  padding-top: 25px;
+  overflow: auto;
 }
 
 .sticky{
@@ -70,32 +83,21 @@ a{
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) );
   /* background-color: #fb0; */
 }
-.sidepanel{
+/* .sidepanel{
   height: 100%;
   width: 100%;
-  /* z-index: 1; */
-  /* position: fixed; */
-  /* background-color: #d7d9d7; */
+  z-index: 1;
+  position: fixed;
+  background-color: #d7d9d7;
   overflow-x: hidden;
-  /* float: right; */
+  float: right;
   padding: 2% 0;
-  /* transition: 1s; */
+  transition: 1s;
   display: flex;
   flex-direction: column;
-  /* max-width: 600px; */
-}
-/* .close_button{
-  position: absolute;
-  top: 2%;
-  right: 2%;
-  margin: 1%;
-  min-width: 5%;
-  min-height: 5%;
-  /* max-width: 3%;
-  max-height: 3%; 
-  background-color:#f1f1f1;
-  border: none;
+  max-width: 600px;
 } */
+
 .formUpperPart{
   display: grid;
   grid-template-columns: 1fr;
@@ -107,25 +109,30 @@ a{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2%;
+  padding: 1%;
   /* max-width: 100px; */
   /* background-color: blueviolet; */
 }
 .submit_button{
-  background-color: #d7d9d7;
-  /* padding:1%; */
-  max-width: 30%;
-  margin-top: 7%;
-  padding: 10px 20px;
+  background-color:white;
+  border: none;
+  margin-top: 2.5em;
+  width: 50%;
+  color: #002651;
+  /* padding: 1% 0; */
+  border-radius: 0.5em;
+  font-size: 1.3em;
+  cursor: pointer;
 }
 .submit_button:hover{
-  background-color: #c7c7c7;
+  background-color:#033670;
+  color: white;
 }
 .divlocation{
   width: 100%;
   display: grid;
   grid-gap: 3%;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   
   /* display: flex;
   justify-content: space-between;
@@ -136,7 +143,7 @@ a{
 .outerdivlocation{
   display: flex;
   justify-content: center;
-  width: 70%;
+  width: 80%;
   /* background-color: brown; */
 }
 .location{
@@ -159,17 +166,20 @@ a{
   /* background-color: chartreuse; */
 }
 .locationTitle{
-  padding-top: 4%;
+  padding-top: 2%;
   font-size: x-large;
+  color:  white;
 }
 .muetTitle,.cateTitle,.courseTitle,.cgpaTitle{
   width: 40%;
+  color:  white;
   /* background-color: #fb0; */
 }
 .title{
-  font-size: 200%;
+  font-size: 100%;
   display: flex;
   justify-content: center;
+  color:  white;
   /* padding: 2%; */
 }
 .noResult{
@@ -177,4 +187,23 @@ a{
   justify-content: center;
   font-size: 400%;
   width: 100%;
+}
+.form-container {
+  /* background-color: white; */
+  width: 50%;
+  height: 100%;
+  float: right;
+  margin-right: 20px;
+  /* margin: auto; */
+  margin-bottom: 45px;
+  /* margin-top: 80px; */
+  background: #002651;
+  border: 0.5px solid;
+  border-radius: 1%;
+  padding: 2% 0;
+}
+h1{
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
 }
