@@ -131,8 +131,10 @@ function processForm(map) {
   let form1 = document.getElementById("filter_form_id");
   const categoryName = form1[0].value;
   const courseName = form1[1].value;
-  const mincgpa = form1[2].value;
-  const minmuet = form1[3].value;
+  const mincgpa = parseInt(form1[2].value);
+  const minmuet = parseInt((form1[3].value).substring(5,6));
+  console.log(`The choice by user are: ${categoryName} ${courseName} min_cgpa:${mincgpa} min_muet:${minmuet}`);
+  console.log(`location(s):`);
   //object to store all locations selected
   let matchedLocations = {};
   //if above input number change, change the initial value of i
@@ -141,16 +143,16 @@ function processForm(map) {
       const location = form1[i].value;
       console.log(location);
       matchedLocations[location] = location;
-      console.log(matchedLocations);
+      // console.log(matchedLocations);
     }
   }
-  console.log("Kuala Lumpur is " + matchLocation(matchedLocations, "Kuala Lumpur"));
+  // console.log("Kuala Lumpur is " + matchLocation(matchedLocations, "Kuala Lumpur"));
 
   //start filtering
-  console.log(map);
-  console.log(map.get(categoryName));
-  console.log(map.get(categoryName).get(courseName));
-  console.log(map.get(categoryName).get(courseName).get(0));
+  // console.log(map);
+  // console.log(map.get(categoryName));
+  // console.log(map.get(categoryName).get(courseName));
+  // console.log(map.get(categoryName).get(courseName).get(0));
 
   //change page to initialise html element
   toResultPage();
@@ -159,20 +161,19 @@ function processForm(map) {
   for(let i = 0; i < courseList.size ; i++){
     console.log("one block");
     //b means "block"
-    const bmin_cgpa = courseList.get(i).min_cgpa;
-    const bmin_muet = courseList.get(i).min_muet;
+    let bmin_cgpa = parseInt(courseList.get(i).min_cgpa);
+    let bmin_muet = parseInt(courseList.get(i).min_muet);
     const blocation = courseList.get(i).location;
     const buni_index = courseList.get(i).uni_index;
     
+    console.log(`This block is : ${categoryName} ${courseName} min_cgpa:${bmin_cgpa} min_muet:${bmin_muet}`);
     if(bmin_cgpa >= mincgpa && bmin_muet >= minmuet && matchLocation(matchedLocations, blocation)){
       console.log("MATCHHHHH!");
       gotResult = true;
       addOne(courseName,bmin_cgpa,bmin_muet,buni_index);
+    }else{
+      console.log("Not match.");
     }
-    // console.log(courseList.get(i).min_cgpa);
-    // console.log(courseList.get(i).min_muet);
-    // console.log(courseList.get(i).location);
-    // console.log(courseList.get(i).uni_index);
   }
   if(!gotResult){
     console.log("No result");
