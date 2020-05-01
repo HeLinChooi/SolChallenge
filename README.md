@@ -1,5 +1,5 @@
 # Uni Search #
-Hi! We're team from University of Malaya, our cool team members include @AmritaNambiar, @omarTronto, @Rishi and me! This is our solution in Google Solution Challenge 2020!:heart_eyes:
+Hi! We're team from University of Malaya, our cool team includes @AmritaNambiar, @omarTronto, @Rishi and me! This is our solution in Google Solution Challenge 2020!:heart_eyes:
 
 ## Challenge we're looking to solve ##
 The challenge we’re trying to solve is helping pre-university students to find their suitable course or higher education institution. In Malaysia, there is no such tool for students to look into the courses provided by each university. One has to go website by website to see the information for 1 particular course to compare them. 
